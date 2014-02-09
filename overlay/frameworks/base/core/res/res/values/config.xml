@@ -213,9 +213,6 @@
          Used to decide if the user can change the colors -->
     <bool name="config_multiColorNotificationLed">true</bool>
 
-    <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ff0000ff</color>
-
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
