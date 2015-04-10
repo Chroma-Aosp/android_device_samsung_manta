@@ -94,8 +94,19 @@ PRODUCT_PACKAGES := \
 # audio effects
 PRODUCT_PACKAGES += libaudience_voicefx
 PRODUCT_COPY_FILES += \
-    device/samsung/manta/audio_effects.conf:system/etc/audio_effects.conf
-
+    device/samsung/manta/audio_effects.conf:system/etc/audio_effects.conf \
+    device/samsung/manta/fmas_eq.dat:system/etc/fmas_eq.dat \
+    device/samsung/manta/libfmas.so:system/lib/soundfx/libfmas.so
+    
+#fmas crap
+ PRODUCT_PROPERTY_OVERRIDES += \
+    camera.flash_off=0 \
+    ro.com.widevine.cachesize=16777216 \
+    fmas.spkr_6ch=35,20,110 \
+    fmas.spkr_2ch=35,25 \
+    fmas.spkr_angles=10 \
+    fmas.spkr_sgain=0
+    
 # BCM47511 GPS
 PRODUCT_COPY_FILES += \
     device/samsung/manta/gps/gps.conf:system/etc/gps.conf \
@@ -174,7 +185,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.hwui.text_large_cache_height=1024 \
     ro.hwui.disable_scissor_opt=true \
     af.fast_track_multiplier=1
-
+    
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
