@@ -203,9 +203,22 @@
     <bool name="config_dozeAfterScreenOff">true</bool>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
+    <!-- Whether doze feature is enabled by default in settings. -->
+    <bool name="config_doze_enabled_by_default">false</bool>
+
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+
+    <!-- Does the notification LED support multiple colors?
+         Used to decide if the user can change the colors -->
+    <bool name="config_multiColorNotificationLed">true</bool>
+
+    <!-- Default color for notification LED is green. -->
+    <color name="config_defaultNotificationColor">#ff0000ff</color>
+
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
 
-    <!-- Whether doze feature is enabled by default in settings. -->
-    <bool name="config_doze_enabled_by_default">false</bool>
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">true</bool>
 </resources>
